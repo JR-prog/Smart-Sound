@@ -20,7 +20,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 chrome.tabs.onRemoved.addListener(function (tabId, changeInfo, tab) {
     chrome.tabs.query({}, function (tabs) {
         for (var i = 0; i < tabs.length; i++) {
-            if (bgmTabId != 0 && tabId != bgmTabId && tabs[i].audible) { return; }
+            if (bgmTabId != 0 && tabs[i].id != bgmTabId && tabs[i].audible) { return; }
         }
         chrome.tabs.update(bgmTabId, {muted: false});
     });

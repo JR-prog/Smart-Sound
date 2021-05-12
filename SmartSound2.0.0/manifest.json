@@ -5,6 +5,9 @@
     "background": {
         "scripts": ["background.js"]
     },
+    "icons": {
+        "128": "SmartSound-logo.png"
+    },
     "permissions": [
         "tabs"
       ]
